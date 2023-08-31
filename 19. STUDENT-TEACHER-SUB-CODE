@@ -1,0 +1,20 @@
+teacher(john, math).
+teacher(lisa, physics).
+teacher(alex, chemistry).
+teacher(sarah, computer_science).
+
+% Facts about students
+student(james, math).
+student(emily, physics).
+student(oliver, chemistry).
+student(sophia, computer_science).
+student(emma, math).
+student(liam, physics).
+
+% Rules to determine which students are taught by a teacher for a subject
+teaches(Teacher, Subject) :-
+    teacher(Teacher, Subject).
+
+% Rules to determine which students are enrolled in a subject
+enrolled(Student, Subject) :-
+    student(Student, Subject).
